@@ -1,0 +1,96 @@
+/* Theme colors */
+:root {
+    --royal-blue: #4169e1;
+    --black: #000000;
+    --white: #ffffff;
+    --beige: #f5f5dc;
+  }
+  
+  .login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--royal-blue), var(--black));
+  }
+  
+  .login-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: var(--black);
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+  
+  .input-group svg {
+    margin-right: 10px;
+    color: var(--black);
+  }
+  
+  .input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    background: transparent;
+    color: var(--black);
+  }
+  
+  .forgot {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: var(--black);
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    background: linear-gradient(to right, var(--royal-blue), var(--beige));
+    color: var(--black);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .divider {
+    margin: 20px 0 10px;
+    font-size: 14px;
+    color: var(--black);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons svg {
+    color: var(--royal-blue);
+    cursor: pointer;
+  }
+  
+  .signup-link {
+    font-size: 14px;
+    color: var(--black);
+  }
+  

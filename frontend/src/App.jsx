@@ -1,12 +1,16 @@
-import { Routes, Route } from 'react-router-dom'
-import CustomerLogin from './pages/CustomerLogin'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import CustomerLogin from './pages/Customerlogin';
+import CustomerSignup from './pages/Customersignup';
+
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<CustomerLogin />} />
-      {/* We'll add more pages later */}
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<CustomerLogin />} />
+        <Route path="/signup" element={<CustomerSignup />} />
+      </Routes>
+    </Router>
   )
 }
 
