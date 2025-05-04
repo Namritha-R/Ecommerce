@@ -93,4 +93,10 @@
     font-size: 14px;
     color: var(--black);
   }
-  
+  /* index.css or global */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}

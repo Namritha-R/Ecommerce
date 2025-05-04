@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import './CustomerLogin.css'
-import { FaUser, FaLock, FaFacebook, FaTwitter, FaGoogle } from 'react-icons/fa'
+import { useState } from 'react';
+import './CustomerLogin.css';
+import { FaUser, FaLock, FaFacebook, FaTwitter, FaGoogle } from 'react-icons/fa';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function CustomerLogin() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    console.log({ email, password })
-  }
+    e.preventDefault();
+    console.log({ email, password });
+    navigate('/home');
+  };
 
   return (
     <div className="login-page">
@@ -36,17 +39,24 @@ export default function CustomerLogin() {
               required
             />
           </div>
-          <div className="forgot">Forgot password?</div>
+
+          <div className="forgot">
+            <Link to="/forgot-password">Forgot password?</Link>
+          </div>
+
           <button type="submit" className="login-btn">LOGIN</button>
         </form>
+
         <div className="divider">Or Sign Up Using</div>
         <div className="social-icons">
           <FaFacebook />
           <FaTwitter />
           <FaGoogle />
         </div>
-        <div className="signup-link">Or Sign Up Using <b>SIGN UP</b></div>
+        <div className="signup-link">
+          Or Sign Up Using <Link to="/signup"><b>SIGN UP</b></Link>
+        </div>
       </div>
     </div>
-  )
+  );
 }

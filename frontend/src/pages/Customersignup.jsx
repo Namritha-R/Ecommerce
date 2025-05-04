@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './Customersignup.css'
+import { useNavigate, Link } from 'react-router-dom';
+
 
 export default function CustomerSignup() {
   const [form, setForm] = useState({
@@ -10,7 +12,7 @@ export default function CustomerSignup() {
     address: '',
     pincode: ''
   })
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
@@ -18,7 +20,7 @@ export default function CustomerSignup() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Customer signup data:', form)
-    // You'll later send this to backend
+    navigate('/home');
   }
 
   return (
@@ -34,7 +36,7 @@ export default function CustomerSignup() {
           <input name="pincode" placeholder="Pincode" onChange={handleChange} required />
           <button type="submit">Register</button>
         </form>
-        <p>Already have an account? <b>Login</b></p>
+        <p>Already have an account?  <Link to="/"><b>Login</b></Link></p>
       </div>
     </div>
   )
